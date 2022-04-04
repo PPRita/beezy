@@ -1,0 +1,11 @@
+/* Main Colors */
+$font: #ffffff;
+$lighter-font: rgba(255, 255, 255, 0.60);
+$grey: #585a5c;
+$cool-grey: #9fa3a7;
+$tomato: #f05638;
+// $background-gradient: linear-gradient(270deg, rgba(98,167,255,1) 0%,  rgba(63,81,173,1) 75%, rgba(20,45,76,1) 100%);
+$background-gradient: linear-gradient(270deg, #62a7ff 0%, #435ab6 18%, #435ab6 15%, #3f51ad 25%, #142d4c 91%);
+$mobile-background-gradient: linear-gradient(0deg, #62a7ff 0%, #435ab6 18%, #435ab6 15%, #3f51ad 25%, #142d4c 91%);
+/* Transition */
+$transition: all .7 ease-in-out; 

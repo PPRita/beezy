@@ -1,0 +1,250 @@
+// Main section
+.main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: $background-gradient;
+  border-bottom: 16vh solid white;
+  padding: 42px;
+}
+
+// Image aside
+.image-content {
+  display: flex;
+  width: 60vw;
+  height: 100%;
+  justify-content: flex-end;
+  padding-right: 42px;
+  .image-wrapper {
+    height: calc(100vh - 148px);
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// Info aside
+.info-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 74px;
+  .socialMedia-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    .icon-wrapper {
+      margin-right: 10px;
+      a {
+        text-decoration: none;
+        transition: $transition;
+        img {
+          height: 32px;
+          width: auto;
+        }
+        &:hover {
+          opacity: 0.7;
+          transition: $transition;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    .logo-wrapper {
+      margin-bottom: 30px;
+      img {
+        width: 132px;
+        height: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+    .mobile-image-wrapper {
+      display: none;
+      margin-bottom: 26px;
+      width: 80%;
+      max-height: 240px;
+      img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .info {
+      max-width: 660px;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .secondary-info {
+      max-width: 620px;
+    }
+    .mobile-info {
+      display: none;
+    }
+  }
+}
+
+// Input
+.inputSend-wrapper {
+  display: flex;
+  width: 400px;
+  height: 55px;
+  .input-wrapper {
+    display: flex;
+    width: 100%;
+    input {
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 8px 0 0 8px;
+      border: unset;
+      font-size: 20px;
+      color: $grey;
+      &::placeholder {
+        color: $cool-grey;
+      }
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 122px;
+    background-color: $tomato;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    h6 {
+      text-transform: uppercase;
+    }
+    &:hover {
+      opacity: 0.8;
+      transition: $transition;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 1200px) {
+  .main {
+    border: unset;
+  }
+}
+
+@media (max-width: 860px) {
+  .main {
+    background: $mobile-background-gradient;
+  }
+  .image-content {
+    display: none;
+  }
+  .info-content {
+    margin-left: 0;
+    .socialMedia-wrapper {
+      display: none;
+    }
+    .info-wrapper {
+      align-items: center;
+      .mobile-image-wrapper {
+        display: flex;
+      }
+      .info {
+        text-align: center;
+        h1 {
+          font-size: 42px;
+          line-height: 52px;
+        }
+      }
+      .desktop-info {
+        display: none;
+      }
+      .mobile-info {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 16px;
+  }
+  .info-content {
+    .info-wrapper {
+      .mobile-image-wrapper {
+        width: 90%;
+      }
+      .info {
+        text-align: center;
+        h1 {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+      .inputSend-wrapper {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .info-content {
+    .info-wrapper {
+      .info {
+        text-align: center;
+        h1 {
+          font-size: 28px;
+          line-height: 32px;
+        }
+        h3 {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+      .inputSend-wrapper {
+        .input-wrapper {
+          input {
+            font-size: 16px;
+          }
+        }
+        .button-wrapper {
+          max-width: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 568px) {
+  .info-content {
+    height: auto;
+    .info-wrapper {
+      .mobile-image-wrapper {
+        max-height: 120px;
+      }
+      .info {
+        margin-bottom: 16px;
+      }
+      .inputSend-wrapper {
+        height: 44px;
+      }
+    }
+  }
+}
